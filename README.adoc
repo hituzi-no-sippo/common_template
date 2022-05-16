@@ -1,0 +1,14 @@
+= Common Template Repository
+:author: hituzi no sippo
+:revnumber: v0.1.0
+:revdate: 2022-03-13T17:57:20+0900
+:revremark: Add Asciidoc header
+:description: README
+:copyright: copyright (c) 2022 {author}
+:toc: rigth
+:toclevels: 4
+:creation_date: 2022-03-13T17:55:37+0900
+
+'''
+
+Copyright (c) 2022 {author}
