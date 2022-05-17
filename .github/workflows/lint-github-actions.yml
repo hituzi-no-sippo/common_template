@@ -21,14 +21,25 @@ jobs:
         # yamllint disable-line rule:line-length
         run: bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
 
+      - name: Download shellcheck
+        # yamllint disable rule:line-length
+        run: |
+          curl --location --silent https://github.com/koalaman/shellcheck/releases/download/stable/shellcheck-stable.linux.x86_64.tar.xz \
+            --output shellcheck-stable.linux.x86_64.tar.xz
+          tar --extract --file=shellcheck-stable.linux.x86_64.tar.xz \
+            --directory=./
+          mv shellcheck-stable/shellcheck ./
+        # yamllint enable rule:line-length
       - name: Add Matcher
         # yamllint disable rule:line-length
         run: |
-          curl --location --silent https://raw.githubusercontent.com/rhysd/actionlint/main/.github/actionlint-matcher.json
+          curl --location --silent https://raw.githubusercontent.com/rhysd/actionlint/main/.github/actionlint-matcher.json \
             --output actionlint-matcher.json
           echo "::add-matcher::./actionlint-matcher.json"
         # yamllint enable rule:line-length
 
       - name: Lint Workflow Files
+        run: |
           ${{ steps.get_actionlint.outputs.executable }} \
-            -color
+            -color \
+            -shellcheck ./shellcheck
