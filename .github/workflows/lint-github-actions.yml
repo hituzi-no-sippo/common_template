@@ -19,6 +19,13 @@ jobs:
         id: get_actionlint
         # yamllint disable-line rule:line-length
         run: bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+      - name: Add Matcher
+        # yamllint disable rule:line-length
+        run: |
+          curl --location --silent https://raw.githubusercontent.com/rhysd/actionlint/main/.github/actionlint-matcher.json
+            --output actionlint-matcher.json
+          echo "::add-matcher::./actionlint-matcher.json"
+        # yamllint enable rule:line-length
       - name: Lint Workflow Files
           ${{ steps.get_actionlint.outputs.executable }} \
             -color
