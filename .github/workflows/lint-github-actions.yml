@@ -32,6 +32,8 @@ jobs:
             --directory=./
           mv shellcheck-stable/shellcheck ./
         # yamllint enable rule:line-length
+      - name: Install Pyflakes
+        run: pip install pyflakes
       - name: Add Matcher
         # yamllint disable rule:line-length
         run: |
@@ -43,4 +45,5 @@ jobs:
         run: |
           ${{ steps.get_actionlint.outputs.executable }} \
             -color \
-            -shellcheck ./shellcheck
+            -shellcheck ./shellcheck \
+            -pyflakes pyflakes
