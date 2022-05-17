@@ -7,9 +7,13 @@ function __setup_yaml_tools() {
 
 	__setup_formatter
 }
+function __setup_github_actions_linter() {
+	go install github.com/rhysd/actionlint/cmd/actionlint@latest
+}
 
 function setup() {
 	__setup_yaml_tools
+	__setup_github_actions_linter
 }
 
 setup
