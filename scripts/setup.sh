@@ -27,12 +27,18 @@ function __setup_yaml_tools() {
 
 	__setup_formatter
 }
+function __setup_github_actions_linter() {
+	info "Setup GitHub Actions linter"
+
+	go install github.com/rhysd/actionlint/cmd/actionlint@latest
+}
 
 function setup() {
 	info "Setup Start"
 
 	__setup_json_tools
 	__setup_yaml_tools
+	__setup_github_actions_linter
 
 	info "Setup Complete"
 }
