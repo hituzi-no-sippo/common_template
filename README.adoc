@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.6.0
-:revdate: 2022-05-30T18:18:31+0900
-:revremark: Add GitHub Actions linter
+:revnumber: v0.7.0
+:revdate: 2022-05-30T18:23:38+0900
+:revremark: Add reviewdog for GitHub Actions lint
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -13,6 +13,8 @@
 :repository: {owner_name}/{repository_name}
 :github_url: https://github.com
 :repository_url: {github_url}/{repository}
+:github_actions_marketplace_url: {github_url}/marketplace/actions
+:reviewdog_link: link:{github_url}/reviewdog/reviewdog[reviewdog^]
 :workflows_path: .github/workflows
 
 == Linter & Formatter
@@ -40,6 +42,11 @@ Linter:: {actionlint_link}
 :filename: lint-github-actions.yml
 .GitHub Actions
 * link:{workflows_path}/{filename}[{filename}^]
+
+:actionlint_with_reviewdog_link: link:{github_actions_marketplace_url}/actionlint-with-reviewdog[actionlint-with-reviewdog^]
+.{reviewdog_link}
+{actionlint_with_reviewdog_link}::
+  Use link:{workflows_path}/{filename}#:~:text=reviewdog/action%2Dactionlint[{filename}^].
 
 
 == Introduction
