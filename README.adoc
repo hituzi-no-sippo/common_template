@@ -1,13 +1,28 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.2.0
-:revdate: 2022-04-18T13:52:02+0900
-:revremark: Add MIT-0 LICENSE
+:revnumber: v0.3.0
+:revdate: 2022-05-30T18:10:16+0900
+:revremark: Add Introduction
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
 :toclevels: 4
 :creation_date: 2022-03-13T17:55:37+0900
+:owner_name: hituzi-no-sippo
+:repository_name: common_template
+:repository: {owner_name}/{repository_name}
+:github_url: https://github.com
+:repository_url: {github_url}/{repository}
+
+== Introduction
+
+.Setup
+. Create repository with this template.
+** `gh repo create <REPOSITORY_NAME> --public --template {repository}`
+** link:{repository_url}/generate[Use this template^].
+. Clone repository. +
+  `gh repo clone <REPOSITORY_NAME> && cd <REPOSITORY_NAME>`
+
 
 '''
 
