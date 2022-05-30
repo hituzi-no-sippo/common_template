@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.10.0
-:revdate: 2022-05-31T07:30:08+0900
-:revremark: Add shell formatter
+:revnumber: v0.11.0
+:revdate: 2022-05-31T17:25:59+0900
+:revremark: Add shell linter
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -22,8 +22,10 @@
 === Shell
 
 :shfmt_link: link:{github_url}/mvdan/sh[shfmt^]
+:shellcheck_link: link:https://www.shellcheck.net/[shellcheck]
 [horizontal]
 Formatter:: {shfmt_link}
+Linter:: {shellcheck_link}
 
 === YAML
 
