@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Run Prettier with reviewdog
+        uses: EPMatt/reviewdog-action-prettier@v1
+        with:
+          level: warning
+          reporter: github-pr-review
+          prettier_flags: "**/*.(yml|yaml)"
       - name: Format Check with Prettier
         uses: creyD/prettier_action@v4.2
         with:
