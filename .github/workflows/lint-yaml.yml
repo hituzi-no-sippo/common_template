@@ -1,0 +1,17 @@
+---
+name: Lint YAML
+
+on: [push, pull_request]
+
+jobs:
+  format:
+    name: Format
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Format Check with Prettier
+        uses: creyD/prettier_action@v4.2
+        with:
+          dry: true
+          prettier_options: --check **/*.(yml|yaml)
