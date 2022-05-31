@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.14.0
-:revdate: 2022-05-31T20:22:21+0900
-:revremark: Add reviewdog for Shell Linter
+:revnumber: v0.15.0
+:revdate: 2022-06-01T13:10:43+0900
+:revremark: Add YAML linter
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -43,12 +43,15 @@ Linter:: {shellcheck_link}
 
 === YAML
 
-:yamllint_link: link:https://yamllint.readthedocs.io/en/stable/index.html[yamllint^]
 :prettier_link: link:https://prettier.io/[Prettier^]
+:yamllint_link: link:https://yamllint.readthedocs.io/en/stable/index.html[yamllint^]
 [horizontal]
 Formatter::
   {prettier_link} +
   link:.prettierrc.yml[Configuration File^]
+Linter::
+  {yamllint_link} +
+  link:.yamllint.yml[Configuration File^]
 
 :yq_link: link:https://mikefarah.gitbook.io/yq/[yq^]
 {yamllint_link} can not format.
