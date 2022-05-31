@@ -1,0 +1,23 @@
+---
+name: Lint Shell
+
+on:
+  push:
+    paths:
+      - "**.sh"
+      - ".shellcheckrc"
+  pull_request:
+    paths:
+      - "**.sh"
+      - ".shellcheckrc"
+
+jobs:
+  lint:
+    name: Check format with shfmt and lint with shellcheck
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Format with shfmt and Lint with shellcheck
+        uses: luizm/action-sh-checker@v0.5.0

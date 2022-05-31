@@ -1,24 +1,33 @@
 = Shell
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-07-24T16:03:36+09:00
-:revremark: Add linter
+:revnumber: v0.4.0
+:revdate: 2022-07-24T16:05:32+09:00
+:revremark: Add GitHub Actions
 :description: Shell
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-24T16:00:52+09:00
 :github_url: https://github.com
+:workflows_path: ../../.github/workflows
 
 == Formatter
 
 :shfmt_link: link:{github_url}/mvdan/sh[shfmt^]
 {shfmt_link}
 
+:filename: lint-shell.yml
+.GitHub Actions
+* link:{workflows_path}/{filename}[{filename}^]
+
 == Linter
 
 :shellcheck_link: link:https://www.shellcheck.net/[shellcheck^]
 {shellcheck_link}
+
+:filename: lint-shell.yml
+.GitHub Actions
+* link:{workflows_path}/{filename}[{filename}^]
 
 
 '''
