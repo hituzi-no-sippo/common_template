@@ -1,0 +1,14 @@
+---
+name: Lint Shell
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    name: Format with shfmt and Lint with shellcheck
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Format with shfmt and Lint with shellcheck
+        uses: luizm/action-sh-checker@v0.4.0
