@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.12.0
-:revdate: 2022-05-31T20:08:08+0900
-:revremark: Add GitHub Actions for shell lint
+:revnumber: v0.13.0
+:revdate: 2022-05-31T20:18:44+0900
+:revremark: Add reviewdog for Shell Formatter
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -28,8 +28,15 @@ Formatter:: {shfmt_link}
 Linter:: {shellcheck_link}
 
 :filename: lint-shell.yml
+:filename_on_pull_request: lint-shell-on-pull-request.yml
 .GitHub Actions
 * link:{workflows_path}/{filename}[{filename}^]
+* link:{workflows_path}/{filename_on_pull_request}[{filename_on_pull_request}^]
+
+:run_shfmt_with_reviewdog_link: link:{github_actions_marketplace_url}/run-shfmt-with-reviewdog[run-shfmt-with-reviewdog^]
+.{reviewdog_link}
+{run_shfmt_with_reviewdog_link}::
+  Use link:{workflows_path}/{filename_on_pull_request}#:~:text=reviewdog/action%2Dshfmt[{filename_on_pull_request}^].
 
 === YAML
 
