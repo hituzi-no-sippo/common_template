@@ -1,14 +1,15 @@
 = Shell
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.4.0
-:revdate: 2022-07-26T17:50:23+09:00
-:revremark: Add GitHub Actions to shell formatter and linter
+:revnumber: v0.5.0
+:revdate: 2022-07-26T17:54:05+09:00
+:revremark: Add GitHub Actions to check shell format with reviewdog
 :description: Shell
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-24T16:00:52+09:00
 :github_url: https://github.com
+:github_actions_marketplace_url: {github_url}/marketplace/actions
 :root_directory: ../..
 :workflows_directory: {root_directory}/.github/workflows
 
@@ -18,8 +19,16 @@
 Using {shfmt_link}.
 
 :filename: lint-shell.yml
+:filename_on_pull_request: lint-shell-on-pull-request.yml
 .GitHub Actions
 * link:{workflows_directory}/{filename}[{filename}^]
+* link:{workflows_directory}/{filename_on_pull_request}[{filename_on_pull_request}^]
+
+:reviewdog_link: link:{github_url}/reviewdog/reviewdog[reviewdog^]
+:run_shfmt_with_reviewdog_link: link:{github_actions_marketplace_url}/run-shfmt-with-reviewdog[run-shfmt-with-reviewdog^]
+.{reviewdog_link}
+link:{workflows_directory}/{filename_on_pull_request}#:~:text=reviewdog/action%2Dshfmt[{filename_on_pull_request}^].::
+  Using {run_shfmt_with_reviewdog_link}.
 
 == Linter
 
