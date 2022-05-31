@@ -2,12 +2,13 @@
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
 :revnumber: v0.1.0
-:revdate: 2022-07-24T14:05:31+09:00
+:revdate: 2022-07-24T17:02:54+09:00
 :revremark: Expand template
 :description: YAML
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-24T14:02:11+09:00
+:root_diretory: ../../..
 
 === YAML
 
@@ -25,6 +26,11 @@ I chose prettier because it had more configurable parameters than {yq_link}.
 :filename: lint-yaml.yml
 .GitHub Actions
 * link:{workflows_path}/{filename}[{filename}^]
+
+== Lint
+
+{yamllint_link} +
+link:{root_diretory}/.yamllint.yml[Configuration File^]
 
 
 '''
