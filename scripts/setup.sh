@@ -47,6 +47,14 @@ function __setup_github_actions_linter() {
 
 	go install github.com/rhysd/actionlint/cmd/actionlint@latest
 }
+function __setup_git_hooks() {
+	info "Setup git hooks manager"
+
+	pip install pre-commit
+
+	pre-commit uninstall
+	pre-commit install
+}
 
 function setup() {
 	info "Setup Start"
@@ -55,6 +63,7 @@ function setup() {
 	__setup_json_tools
 	__setup_yaml_tools
 	__setup_github_actions_linter
+	__setup_git_hooks
 
 	info "Setup Complete"
 }
