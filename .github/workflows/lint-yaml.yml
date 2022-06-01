@@ -6,10 +6,12 @@ on:
     paths:
       - "**.ya?ml"
       - ".prettierrc.yml"
+      - ".yamllint.yml"
   pull_request:
     paths:
       - "**.ya?ml"
       - ".prettierrc.yml"
+      - ".yamllint.yml"
 
 jobs:
   format:
@@ -29,3 +31,18 @@ jobs:
         with:
           dry: true
           prettier_options: --check **/*.(yml|yaml)
+  lint:
+    name: Lint
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # https://yamllint.readthedocs.io/en/stable/integration.html#integration-with-github-actions
+      - name: Setup Python
+        uses: actions/setup-python@v4
+      - name: Install yamllint
+        run: pip install yamllint
+
+      - name: Lint YAML files with yamllint
+        run: yamllint --strict --format=github .
