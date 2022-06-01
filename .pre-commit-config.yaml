@@ -1,0 +1,10 @@
+---
+# Can not use YAML anchors in the pre-commit configuration.
+repos:
+  # YAML
+  # Format
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.7.1
+    hooks:
+      - id: prettier
+        types: [yaml]
