@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.15.0
-:revdate: 2022-06-01T13:10:43+0900
-:revremark: Add YAML linter
+:revnumber: v0.16.0
+:revdate: 2022-06-01T17:32:34+0900
+:revremark: Add reviewdog for YAML formatter
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -61,8 +61,11 @@ I chose prettier because it had more configurable parameters than {yq_link}.
 .GitHub Actions
 * link:{workflows_path}/{filename}[{filename}^]
 
+:run_yamllint_with_reviewdog: link:{github_actions_marketplace_url}/run-yamllint-with-reviewdog[run-yamllint-with-reviewdog^]
 :run_prettier_with_reviewdog_link: link:{github_actions_marketplace_url}/run-prettier-with-reviewdog[run-prettier-with-reviewdog^]
 .{reviewdog_link}
+{run_yamllint_with_reviewdog}::
+  Use link:{workflows_path}/{filename}#:~:text=reviewdog/action%2Dyamllint[{filename}^].
 {run_prettier_with_reviewdog_link}::
   Use link:{workflows_path}/{filename}#:~:text=EPMatt/reviewdog%2Daction%2Dprettier[{filename}^].
 
