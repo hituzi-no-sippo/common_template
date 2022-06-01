@@ -1,9 +1,9 @@
 = YAML
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.4.0
-:revdate: 2022-07-27T13:38:29+09:00
-:revremark: Add yamllint of linter
+:revnumber: v0.5.0
+:revdate: 2022-07-27T13:41:04+09:00
+:revremark: Add GitHub Actions to lint YAML
 :description: YAML
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -29,6 +29,10 @@ link:{root_directory}/.dprint.json[Configuration File^]
 Using {yamllint_link}.
 
 link:{root_directory}/.yamllint.yml[Configuration File^]
+
+:filename: lint-yaml.yml
+.GitHub Actions
+* link:{workflows_directory}/{filename}[{filename}^]
 
 
 '''
