@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.16.0
-:revdate: 2022-06-01T17:32:34+0900
-:revremark: Add reviewdog for YAML formatter
+:revnumber: v0.17.0
+:revdate: 2022-06-03T16:00:21+0900
+:revremark: Add git pre-commit hook for YAML formatter
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -15,6 +15,8 @@
 :repository_url: {github_url}/{repository}
 :github_actions_marketplace_url: {github_url}/marketplace/actions
 :reviewdog_link: link:{github_url}/reviewdog/reviewdog[reviewdog^]
+:pre_commit_config_file_path: .pre-commit-config.yaml
+:pre_commit_orizinazation_url: {github_url}/pre-commit
 :workflows_path: .github/workflows
 
 == Linter & Formatter
@@ -57,6 +59,13 @@ Linter::
 {yamllint_link} can not format.
 I chose prettier because it had more configurable parameters than {yq_link}.
 
+:pre_commit_for_yaml_format_link: {pre_commit_orizinazation_url}/mirrors-prettier[pre-commit/mirrors-prettier^]
+.Git Hooks
+pre-commit::
+format:::
+  Use link:{pre_commit_config_file_path}#:~:text=%2D%20repo%3A%20https%3A//github.com/pre%2Dcommit/mirrors%2Dprettier[
+  pre-commit^] ({pre_commit_for_yaml_format_link}).
+
 :filename: lint-yaml.yml
 .GitHub Actions
 * link:{workflows_path}/{filename}[{filename}^]
@@ -84,6 +93,15 @@ Linter:: {actionlint_link}
 .{reviewdog_link}
 {actionlint_with_reviewdog_link}::
   Use link:{workflows_path}/{filename}#:~:text=reviewdog/action%2Dactionlint[{filename}^].
+
+
+== Git
+
+=== Hooks
+
+:pre_commit_link: link:https://pre-commit.com/[pre-commit^]
+Use {pre_commit_link}. +
+link:{pre_commit_config_file_path}[Configuration File^]
 
 
 == Introduction
