@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.17.0
-:revdate: 2022-06-03T16:00:21+0900
-:revremark: Add git pre-commit hook for YAML formatter
+:revnumber: v0.18.0
+:revdate: 2022-06-03T21:07:23+0900
+:revremark: Add auto update pre-commit hooks
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -102,6 +102,17 @@ Linter:: {actionlint_link}
 :pre_commit_link: link:https://pre-commit.com/[pre-commit^]
 Use {pre_commit_link}. +
 link:{pre_commit_config_file_path}[Configuration File^]
+
+==== Auto Update
+
+Create pull request for update pre-commit hooks if can update pre-commit hooks.
+
+:filename: create-pull-request-for-update-pre-commit-hooks.yml
+It is working on link:{workflows_path}/{filename}[{filename}^]
+
+.When check for updates?
+* Every Day (`cron: "0 0 * * *"`)
+* link:{repository_url}/actions/workflows/{filename}[Run manually^]
 
 
 == Introduction
