@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.20.0
-:revdate: 2022-06-03T21:10:41+0900
-:revremark: Add git pre-commit hook for YAML lint
+:revnumber: v0.21.0
+:revdate: 2022-06-03T21:11:27+0900
+:revremark: Add git pre-commit hook for GitHub Actions lint
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -92,6 +92,13 @@ lint:::
 :actionlint_link: link:{actionlint_url}[actionlint^]
 [horizontal]
 Linter:: {actionlint_link}
+
+:pre_commit_for_actionlint_lint_link: {actionlint_url}/blob/master/.pre-commit-hooks.yaml[actionlint pre-commit^]
+.Git Hooks
+pre-commit::
+lint:::
+  Use link:{actionlint_url}#:~:text=repo%3A%20https%3A//github.com/rhysd/actionlint.git[
+  pre-commit^] ({pre_commit_for_yaml_lint_link}). +
 
 :filename: lint-github-actions.yml
 .GitHub Actions
