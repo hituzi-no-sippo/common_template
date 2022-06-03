@@ -1,0 +1,15 @@
+---
+# Can not use YAML anchors in the pre-commit configuration.
+repos:
+  - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
+    rev: v1.5.1
+    hooks:
+      - id: check-pre-commit-ci-config
+
+ci:
+  autoupdate_schedule: weekly
+  autoupdate_commit_msg: "chore(git-hooks): update pre-commit hooks"
+  autofix_commit_msg: |
+    fix(git-hooks) fix pre-commit hooks from pre-commit.com hooks
+
+    for more information, see https://pre-commit.ci
