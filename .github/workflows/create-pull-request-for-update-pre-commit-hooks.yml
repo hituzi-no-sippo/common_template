@@ -1,0 +1,27 @@
+---
+name: Create Pull Request for Update pre-commit Hooks
+
+on:
+  schedule:
+    # Every Day
+    - cron: "0 0 * * *"
+  # yamllint disable-line rule:empty-values
+  workflow_dispatch:
+
+jobs:
+  auto-update:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+      - name: Pre-commit Auto Update
+        uses: browniebroke/pre-commit-autoupdate-action@main
+      - name: Create Pull Request for Update pre-commit Hooks
+        uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: chore/update-pre-commit-hooks
+          title: "chore(git-hooks): update pre-commit hooks"
+          commit-message: "chore(git-hooks): update pre-commit hooks"
+          body: Update versions of pre-commit hooks to latest version.
