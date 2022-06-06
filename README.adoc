@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.25.0
-:revdate: 2022-06-06T18:20:35+0900
-:revremark: Add git pre-commit hook for fix end of file
+:revnumber: v0.26.0
+:revdate: 2022-06-06T18:20:45+0900
+:revremark: Add git pre-commit hook for line ending replaced
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -140,10 +140,12 @@ link:{pre_commit_config_file_path}[Configuration File^]
 
 :trim_trailing_whitespace_link: link:{pre_commit_repository_url}#trailing-whitespace[trim trailing whitespace^]
 :end_of_line_fixer_link: link:{pre_commit_repository_url}#end-of-file-fixer[end of line fixer^]
+:mixed_line_ending_link: link:{pre_commit_repository_url}#mixed-line-ending[mixed line ending^]
 * {trim_trailing_whitespace_link}
   `end of line.____` (`_` is white space) => `end of line.`
   Markdown will not be trimmed.
 * {end_of_line_fixer_link}
+* {mixed_line_ending_link}
 
 :!hardbreaks-option:
 
