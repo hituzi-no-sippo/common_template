@@ -7,6 +7,13 @@ repos:
     rev: v3.5.1-1
     hooks:
       - id: shfmt
+  # Lint
+  # https://github.com/koalaman/shellcheck#pre-commit
+  - repo: https://github.com/koalaman/shellcheck-precommit
+    rev: v0.8.0
+    hooks:
+      - id: shellcheck
+        args: [--severity=warning]
 
   # YAML
   # Format
@@ -22,6 +29,13 @@ repos:
     hooks:
       - id: yamllint
         args: [--strict]
+
+  # Shell
+  # Format
+  - repo: https://github.com/scop/pre-commit-shfmt
+    rev: v3.5.1-1
+    hooks:
+      - id: shfmt
 
   # GitHub Actions
   # Lint
@@ -45,3 +59,4 @@ ci:
     for more information, see https://pre-commit.ci
   skip:
     - actionlint
+    - shellcheck
