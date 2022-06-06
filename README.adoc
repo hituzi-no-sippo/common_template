@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.26.0
-:revdate: 2022-06-06T18:20:45+0900
-:revremark: Add git pre-commit hook for line ending replaced
+:revnumber: v0.27.0
+:revdate: 2022-06-06T20:25:42+0900
+:revremark: Add git pre-commit hook for protect main and master branches
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -146,6 +146,16 @@ link:{pre_commit_config_file_path}[Configuration File^]
   Markdown will not be trimmed.
 * {end_of_line_fixer_link}
 * {mixed_line_ending_link}
+
+===== Git
+
+:no_commit_to_branch_link: link:{pre_commit_repository_url}#no-commit-to-branch[no commit to branch]
+* {no_commit_to_branch_link}
+  Protect main and master branches from direct push.
+  You could do something similar with link:{repository_url}/settings/branch_protection_rules/new[
+  branch protection rules^].
+  (See also link:https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests[
+  Defining the mergeability of pull requests^].)
 
 :!hardbreaks-option:
 
