@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.23.0
-:revdate: 2022-06-06T18:20:14+0900
-:revremark: Add git pre-commit hook for shell script lint
+:revnumber: v0.24.0
+:revdate: 2022-06-06T18:20:25+0900
+:revremark: Add git pre-commit hook for trailing whitespaces
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -131,6 +131,19 @@ lint:::
 :pre_commit_link: link:https://pre-commit.com/[pre-commit^]
 Use {pre_commit_link}. +
 link:{pre_commit_config_file_path}[Configuration File^]
+
+==== Setting Hooks
+
+:hardbreaks-option:
+
+===== Style
+
+:trim_trailing_whitespace_link: link:{pre_commit_repository_url}#trailing-whitespace[trim trailing whitespace^]
+* {trim_trailing_whitespace_link}
+  `end of line.____` (`_` is white space) => `end of line.`
+  Markdown will not be trimmed.
+
+:!hardbreaks-option:
 
 ==== CI
 
