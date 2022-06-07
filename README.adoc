@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.27.0
-:revdate: 2022-06-06T20:25:42+0900
-:revremark: Add git pre-commit hook for protect main and master branches
+:revnumber: v0.28.0
+:revdate: 2022-06-07T13:47:42+0900
+:revremark: Add git pre-commit hook for check merge conflict
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -152,9 +152,11 @@ link:{pre_commit_config_file_path}[Configuration File^]
 :no_commit_to_branch_link: link:{pre_commit_repository_url}#no-commit-to-branch[no commit to branch]
 :branch_protection_rules_documentation_link: link:https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests[ \
   branch protection rules^]
+:check_merge_conflict_link: link:{pre_commit_repository_url}#check-merge-conflict[check merge conflict]
 * {no_commit_to_branch_link}
   Protect main and master branches from direct push.
   You could do something similar with {branch_protection_rules_documentation_link}.
+* {check_merge_conflict_link}
 
 :!hardbreaks-option:
 
