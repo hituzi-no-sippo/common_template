@@ -57,6 +57,7 @@ repos:
         args: [--maxkb=500]
       # Symlink
       - id: check-symlinks
+      - id: destroyed-symlinks
 
   - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
     rev: v1.5.1
