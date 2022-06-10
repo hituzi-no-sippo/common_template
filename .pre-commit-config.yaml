@@ -62,6 +62,8 @@ repos:
       - id: check-case-conflict
       - id: check-added-large-files
         args: [--maxkb=500]
+      # Symlink
+      - id: check-symlinks
 
   - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
     rev: v1.5.1
