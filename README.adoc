@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.32.0
-:revdate: 2022-06-10T17:34:23+0900
-:revremark: Add git pre-commit hook for check added file size
+:revnumber: v0.33.0
+:revdate: 2022-06-11T08:32:43+0900
+:revremark: Add git pre-commit hook for check broken symlinks
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -180,6 +180,11 @@ incorrect:: `{prefix_url}/blob/main/LICENSE#L1`
   Prevents adding files larger than the specified size.
   The maximum size is specified by `--maxkb` argument.
   Default maximum size 500kb.
+
+===== Symlink
+
+:check_symlinks_link: link:{pre_commit_repository_url}#check-symlinks[check symlinks^]
+* {check_symlinks_link}
 
 :!hardbreaks-option:
 
