@@ -60,6 +60,8 @@ repos:
       # File
       - id: fix-byte-order-marker
       - id: check-case-conflict
+      - id: check-added-large-files
+        args: [--maxkb=500]
 
   - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
     rev: v1.5.1
