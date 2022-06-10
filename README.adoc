@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.31.0
-:revdate: 2022-06-10T17:30:46+0900
-:revremark: Add git pre-commit hook for check file names
+:revnumber: v0.32.0
+:revdate: 2022-06-10T17:34:23+0900
+:revremark: Add git pre-commit hook for check added file size
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -171,10 +171,15 @@ incorrect:: `{prefix_url}/blob/main/LICENSE#L1`
 
 :fix_byte_order_marker_link: link:{pre_commit_repository_url}#fix-byte-order-marker[fix byte order marker^]
 :check_case_conflict_link: link:{pre_commit_repository_url}#check-case-conflict[check case conflict^]
+:check_added_large_files_link: link:{pre_commit_repository_url}#check-added-large-files[check added large files^]
 * {fix_byte_order_marker_link}
 * {check_case_conflict_link}
   Prevents add file with name that same on a case-insensitive.
   e.g. `readme.md`, `REAMDME.md`
+* {check_added_large_files_link}
+  Prevents adding files larger than the specified size.
+  The maximum size is specified by `--maxkb` argument.
+  Default maximum size 500kb.
 
 :!hardbreaks-option:
 
