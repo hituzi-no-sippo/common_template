@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.33.0
-:revdate: 2022-06-11T08:32:43+0900
-:revremark: Add git pre-commit hook for check broken symlinks
+:revnumber: v0.35.0
+:revdate: 2022-06-11T08:44:21+0900
+:revremark: Add git pre-commit hook for check destroyed symlinks
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -182,10 +182,15 @@ incorrect:: `{prefix_url}/blob/main/LICENSE#L1`
   The maximum size is specified by `--maxkb` argument.
   Default maximum size 500kb.
 
+:commit_hash_for_latest_version: 3298ddab3c13dd77d6ce1fc0baf97691430d84b0
 ===== Symlink
 
-:check_symlinks_link: link:{pre_commit_repository_url}#check-symlinks[check symlinks^]
+:check_symlinks_link: link:{pre_commit_repository_url}#check-symlinks[check broken symlinks^]
+:destroyed_symlinks_link: link:{pre_commit_repository_url}#destroyed-symlinks[destroyed symlinks^]
+:destroyed_symlinks_test_permalink_url: {pre_commit_repository_url}/blob/{commit_hash_for_latest_version}/tests/destroyed_symlinks_test.py#L33-L39
 * {check_symlinks_link}
+* {destroyed_symlinks_link}
+  link:{destroyed_symlinks_test_permalink_url}[This is related to `core.symlinks`.^]
 
 :!hardbreaks-option:
 
