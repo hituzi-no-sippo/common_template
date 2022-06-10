@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.30.0
-:revdate: 2022-06-10T17:18:20+0900
-:revremark: Add git pre-commit hook for fix BOM
+:revnumber: v0.31.0
+:revdate: 2022-06-10T17:30:46+0900
+:revremark: Add git pre-commit hook for check file names
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -170,7 +170,11 @@ incorrect:: `{prefix_url}/blob/main/LICENSE#L1`
 ===== File
 
 :fix_byte_order_marker_link: link:{pre_commit_repository_url}#fix-byte-order-marker[fix byte order marker^]
+:check_case_conflict_link: link:{pre_commit_repository_url}#check-case-conflict[check case conflict^]
 * {fix_byte_order_marker_link}
+* {check_case_conflict_link}
+  Prevents add file with name that same on a case-insensitive.
+  e.g. `readme.md`, `REAMDME.md`
 
 :!hardbreaks-option:
 
