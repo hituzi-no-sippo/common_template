@@ -7,3 +7,4 @@ shfmt
 shellcheck
 dasel
 mergeability
+taplo
