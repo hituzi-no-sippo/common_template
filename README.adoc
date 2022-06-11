@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.37.0
-:revdate: 2022-06-11T09:35:49+0900
-:revremark: Add git pre-commit hook for check files with shebang
+:revnumber: v0.38.0
+:revdate: 2022-06-11T09:40:16+0900
+:revremark: Add git pre-commit hook for check private keys
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -133,6 +133,8 @@ Use {pre_commit_link}. +
 link:{pre_commit_config_file_path}[Configuration File^]
 
 ==== Setting Hooks
+:pre_commit_version: v4.3.0
+:pre_commit_tree_url: {pre_commit_repository_url}/tree/v4.3.0
 
 :hardbreaks-option:
 
@@ -199,6 +201,13 @@ incorrect:: `{prefix_url}/blob/main/LICENSE#L1`
 * {check_symlinks_link}
 * {destroyed_symlinks_link}
   link:{destroyed_symlinks_test_permalink_url}[This is related to `core.symlinks`.^]
+
+===== Security
+
+:detect_private_keys_link: link:{pre_commit_repository_url}#detect-private-key[detect private keys^]
+:block_list_link: link:{pre_commit_repository_url}/blob/{commit_hash_for_latest_version}/pre_commit_hooks/detect_private_key.py#L7-L16[Block List]
+* {detect_private_keys_link}
+  {block_list_link}
 
 :!hardbreaks-option:
 
