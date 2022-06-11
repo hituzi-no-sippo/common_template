@@ -1,8 +1,8 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.38.0
-:revdate: 2022-06-11T09:40:16+0900
-:revremark: Add git pre-commit hook for check private keys
+:revnumber: v0.39.0
+:revdate: 2022-06-11T11:41:12+0900
+:revremark: Add TOML formatter & linter
 :description: README
 :copyright: copyright (c) 2022 {author}
 :toc: rigth
@@ -99,6 +99,14 @@ lint:::
   Use link:{workflows_path}/{filename}#:~:text=reviewdog/action%2Dyamllint[{filename}^].
 {run_prettier_with_reviewdog_link}::
   Use link:{workflows_path}/{filename}#:~:text=EPMatt/reviewdog%2Daction%2Dprettier[{filename}^].
+
+=== TOML
+
+:taplo_link: link:https://taplo.tamasfe.dev/[taplo^]
+[horizontal]
+Formatter & Linter::
+  {taplo_link} +
+  link:.taplo.toml[Configuration File^]
 
 === GitHub Actions
 
