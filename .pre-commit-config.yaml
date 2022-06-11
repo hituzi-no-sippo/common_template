@@ -64,6 +64,7 @@ repos:
         args: [--maxkb=500]
       # Shebang
       - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
       # Symlink
       - id: check-symlinks
       - id: destroyed-symlinks
