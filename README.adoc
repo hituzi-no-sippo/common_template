@@ -1,7 +1,7 @@
 = Common Template Repository
 :author: hituzi no sippo
 :revnumber: v0.40.0
-:revdate: 2022-06-11T15:49:18+0900
+:revdate: 2022-06-27T16:31:16+0900
 :revremark: Add GitHub Actions for TOML lint
 :description: README
 :copyright: copyright (c) 2022 {author}
@@ -111,6 +111,16 @@ Formatter & Linter::
 :filename: lint-toml.yml
 .GitHub Actions
 * link:{workflows_path}/{filename}[{filename}^]
+
+:pre_commit_for_toml_format_and_lint_link: link:{github_url}/{owner_name}/pre-commit-toml-with-taplo[{owner_name}/pre-commit-toml-with-taplo^]
+.Git Hooks
+pre-commit::
+format:::
+  Use link:{pre_commit_config_file_path}#:~:text=id%3A%20format%2Dwith%2Dtaplo[
+  pre-commit^] ({pre_commit_for_toml_format_and_lint_link}).
+lint:::
+  Use link:{pre_commit_config_file_path}#:~:text=id%3A%20lint%2Dwith%2Dtaplo[
+  pre-commit^] ({pre_commit_for_toml_format_and_lint_link}).
 
 === GitHub Actions
 
