@@ -37,6 +37,13 @@ repos:
     hooks:
       - id: shfmt
 
+  # TOML
+  - repo: https://github.com/hituzi-no-sippo/pre-commit-toml-with-taplo
+    rev: v1.0.0
+    hooks:
+      - id: taplo-format
+      - id: taplo-lint
+
   # GitHub Actions
   # Lint
   # https://github.com/rhysd/actionlint/blob/main/docs/usage.md#pre-commit
@@ -86,3 +93,5 @@ ci:
   skip:
     - actionlint
     - shellcheck
+    - taplo-format
+    - taplo-lint
