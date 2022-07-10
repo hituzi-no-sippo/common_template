@@ -43,6 +43,12 @@ repos:
       - id: yamllint
         args: [--strict]
 
+  # TOML
+  - repo: https://github.com/hituzi-no-sippo/pre-commit-hooks-toml-with-taplo
+    rev: v1.0.0
+    hooks:
+      - id: taplo-format
+
   # GitHub Actions
   # Lint
   # https://github.com/rhysd/actionlint/blob/main/docs/usage.md#pre-commit
@@ -93,3 +99,4 @@ ci:
     - dprint
     - actionlint
     - shellcheck
+    - taplo-format
