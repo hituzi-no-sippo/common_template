@@ -35,6 +35,7 @@ repos:
     rev: 6ae972b5692d37301781f3bd66b3cc860a1f96b2
     hooks:
       - id: taplo-format
+      - id: taplo-lint
 
   # GitHub Actions
   # Lint
@@ -86,3 +87,4 @@ ci:
     - actionlint
     - shellcheck
     - taplo-format
+    - taplo-lint
