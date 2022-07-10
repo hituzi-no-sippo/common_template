@@ -25,14 +25,14 @@ repos:
   # Lint
   # https://yamllint.readthedocs.io/en/stable/integration.html#integration-with-pre-commit
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.26.3
+    rev: v1.27.1
     hooks:
       - id: yamllint
         args: [--strict]
 
   # TOML
   - repo: https://github.com/hituzi-no-sippo/pre-commit-toml
-    rev: 6ae972b5692d37301781f3bd66b3cc860a1f96b2
+    rev: v1.0.0
     hooks:
       - id: taplo-format
       - id: taplo-lint
