@@ -22,6 +22,11 @@ jobs:
           bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
           mv actionlint /usr/local/bin
         # yamllint enable rule:line-length
+      - name: Download Taplo
+        uses: hituzi-no-sippo/taplo-action@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          args: --version
 
       - name: Pre-commit Auto Update
         uses: browniebroke/pre-commit-autoupdate-action@main
