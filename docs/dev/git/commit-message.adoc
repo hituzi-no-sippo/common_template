@@ -1,13 +1,21 @@
 = Git Commit Message
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.1.0
-:revdate: 2022-07-11T16:43:01+09:00
-:revremark: Expand template
+:revnumber: v0.2.0
+:revdate: 2022-07-11T16:51:15+09:00
+:revremark: Add linter
 :description: Git commit message tools
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-11T15:36:50+09:00
+
+Git commit messages conform to link:https://www.conventionalcommits.org[
+Conventional Commits^].
+
+== Linter
+
+:cocogitto_url: https://docs.cocogitto.io
+Using link:{cocogitto_url}[Cocogitto^].
 
 
 '''
