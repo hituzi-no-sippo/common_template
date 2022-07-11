@@ -59,6 +59,8 @@ function __setup_git_commit_message() {
 	info "Setup git commit message linter"
 
 	cargo install cocogitto
+
+	cog install-hook commit-msg
 }
 function __setup_git_hooks() {
 	info "Setup git hooks manager"
