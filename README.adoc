@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.15.0
-:revdate: 2022-07-30T09:09:15+09:00
-:revremark: Add taplo of TOML formatter & linter
+:revnumber: v0.16.0
+:revdate: 2022-07-30T10:16:03+09:00
+:revremark: Add cocogitto of git commit message linter
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -71,6 +71,15 @@ window=_blank]
 :actionlint_link: link:https://github.com/rhysd/actionlint[actionlint^]
 [horizontal]
 Lint:: {actionlint_link}
+
+
+=== Git
+
+:cocogitto_link: link:https://docs.cocogitto.io[Cocogitto^]
+==== Commit messages
+
+[horizontal]
+Lint:: {cocogitto_link}
 
 
 === Writing docs
