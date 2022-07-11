@@ -1,9 +1,9 @@
 = Git Commit Message
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-07-11T20:29:16+09:00
-:revremark: Add ignore merge commit
+:revnumber: v0.4.0
+:revdate: 2022-07-11T20:36:25+09:00
+:revremark: Add git hook
 :description: Git commit message tools
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -28,6 +28,15 @@ link:{cocogitto_documentation_url}#deal-with-merge-commits[
 Cocogitto ignores merge commit
 (e.g. `Merge branch 'main' ...`, `Merge pull request ...`).
 This is because `ignore_merge_commits = true` is set the configuration file^].
+
+=== Git Hooks
+
+.`commit-msg` hook
+Lint commit message (i.e. `cog verify "$MESSAGE"`) on git `commit-msg` hook.
+link:{cocogitto_documentation_url}#built-in-git-hooks[
+This is because setup `<PROJECT_ROOT>/.git/hooks/commit-msg` with
+`cog install-hook commit-msg`^] on link:{project_root_directory_path}/scripts/setup.sh#:~:text=cog%20install%2Dhook%20commit%2Dmsg[
+setup shell].
 
 
 '''
