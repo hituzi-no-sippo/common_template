@@ -1,9 +1,9 @@
 = Git Commit Message
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.2.0
-:revdate: 2022-07-11T16:51:15+09:00
-:revremark: Add linter
+:revnumber: v0.3.0
+:revdate: 2022-07-11T17:18:40+09:00
+:revremark: Add git hook
 :description: Git commit message tools
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -16,6 +16,15 @@ Conventional Commits^].
 
 :cocogitto_url: https://docs.cocogitto.io
 Using link:{cocogitto_url}[cocogitto^].
+
+=== Git Hooks
+
+.`commit-msg` hook
+Lint commit message (i.e. `cog verify "$MESSAGE"`) on git `commit-msg` hook.
+link:{cocogitto_url}/guide#built-in-git-hooks[
+Because setup `<PROJECT_ROOT>/.git/hooks/commit-msg` with
+`cog install-hook commit-msg`^] on link:../../../scripts/setup.sh#:~:text=cog%20install%2Dhook%20commit%2Dmsg[
+setup shell].
 
 
 '''

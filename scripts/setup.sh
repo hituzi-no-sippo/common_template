@@ -30,6 +30,8 @@ function __setup_github_actions_linter() {
 }
 function __setup_git_commit_message() {
 	cargo install cocogitto
+
+	cog install-hook commit-msg
 }
 function __setup_git_hooks() {
 	pip install pre-commit
