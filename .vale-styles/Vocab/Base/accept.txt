@@ -1,3 +1,6 @@
 # Nick Name
 \bhituzi\b
 \bsippo\b
+
+# Tool Name
+\bCocogitto\b
