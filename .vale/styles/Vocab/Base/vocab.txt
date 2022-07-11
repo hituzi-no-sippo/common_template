@@ -8,3 +8,4 @@ shellcheck
 dasel
 mergeability
 taplo
+cocogitto
