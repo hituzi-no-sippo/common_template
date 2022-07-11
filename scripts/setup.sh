@@ -46,6 +46,11 @@ function __setup_github_actions_linter() {
 
 	go install github.com/rhysd/actionlint/cmd/actionlint@latest
 }
+function __setup_git_commit_message() {
+	info "Setup git commit message linter"
+
+	cargo install cocogitto
+}
 function __setup_git_hooks() {
 	info "Setup git hooks manager"
 
@@ -60,6 +65,7 @@ function setup() {
 	__setup_yaml_tools
 	__setup_toml_tools
 	__setup_github_actions_linter
+	__setup_git_commit_message
 	__setup_git_hooks
 }
 
