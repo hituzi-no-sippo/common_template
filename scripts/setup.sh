@@ -28,6 +28,9 @@ function __setup_toml_tools() {
 function __setup_github_actions_linter() {
 	go install github.com/rhysd/actionlint/cmd/actionlint@latest
 }
+function __setup_git_commit_message() {
+	cargo install cocogitto
+}
 function __setup_git_hooks() {
 	pip install pre-commit
 
@@ -40,6 +43,7 @@ function setup() {
 	__setup_yaml_tools
 	__setup_toml_tools
 	__setup_github_actions_linter
+	__setup_git_commit_message
 	__setup_git_hooks
 }
 
