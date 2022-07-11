@@ -1,7 +1,7 @@
 = Common Template Repository
 :author: hituzi no sippo
-:revnumber: v0.42.0
-:revdate: 2022-07-11T07:58:13+09:00
+:revnumber: v0.43.0
+:revdate: 2022-07-11T21:03:39+09:00
 :revremark: Add git hooks for lint TOML
 :description: README
 :copyright: copyright (c) 2022 {author}
