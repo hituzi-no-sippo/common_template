@@ -70,6 +70,11 @@ function __setup_git_hooks() {
 	pre-commit uninstall
 	pre-commit install
 }
+function __setup_genarate_changelog() {
+	info "Setup CHANGELOG generator"
+
+	cargo install git-cliff
+}
 
 function setup() {
 	info "Setup Start"
@@ -81,6 +86,7 @@ function setup() {
 	__setup_github_actions_linter
 	__setup_git_commit_message
 	__setup_git_hooks
+	__setup_genarate_changelog
 
 	info "Setup Complete"
 }
