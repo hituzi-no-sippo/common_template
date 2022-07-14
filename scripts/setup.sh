@@ -69,6 +69,11 @@ function __setup_git_hooks() {
 
 	pre-commit install --overwrite
 }
+function __setup_genarate_changelog() {
+	info "Setup CHANGELOG generator"
+
+	cargo install git-cliff
+}
 function __setup_natural_language() {
 	info "Setup natural language tools"
 
@@ -89,6 +94,7 @@ function setup() {
 	__setup_github_actions_linter
 	__setup_git_commit_message
 	__setup_git_hooks
+	__setup_genarate_changelog
 	__setup_natural_language
 
 	info "Setup Complete"
