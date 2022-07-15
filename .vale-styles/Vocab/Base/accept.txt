@@ -4,3 +4,6 @@
 
 # Tool Name
 \bCocogitto\b
+
+# Abbreviation
+\bci\b
