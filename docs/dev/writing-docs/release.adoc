@@ -2,13 +2,29 @@
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
 :revnumber: v0.2.0
-:revdate: 2022-07-19T14:19:19+09:00
-:revremark: Add bump up tool
+:revdate: 2022-07-19T15:41:26+09:00
+:revremark: Add description of `scripts/prepare-release.sh`
 :description: Release
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-14T16:37:15+09:00
 :root_directory_path: ../..
+
+== Prepare for release
+
+link:{root_directory_path}/scripts/prepare-release.sh[
+Run `bash scripts/prepare-release.sh` to prepare for release.^]
+
+.`prepare-release.sh`
+. Automatically bump versions
+. Generate CHANGELOG as `CHANGELOG.md`
+. Create a commit containing `CHANGELOG.md` +
+  Commit message is `chore(release): prepare for <VERSION>`.
+. Create git tag +
+  Tag name is `<VERSION>`. +
+  Open `GIT_EDITOR` to edit tag message.
+  If you don't want edit tag message with `GIT_EDITOR`, add `GIT_EDITOR=true`.
+  That's you run `GIT_EDITOR=true bash scripts/prepare-release.sh`.
 
 == CHANGELOG
 
