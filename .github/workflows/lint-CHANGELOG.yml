@@ -1,0 +1,29 @@
+---
+name: Lint CHANGELOG.md
+
+on:
+  push:
+    paths:
+      - CHANGELOG.md
+  pull_request:
+    paths:
+      - CHANGELOG.md
+
+jobs:
+  lint:
+    name: Lint CHANGELOG.md
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Remove CHANGELOG.md in markdownlint ignore
+        run: rm .markdownlintignore
+      # avtodev/markdown-lint:v1 haven't disable rule option
+      - name: Disable markdownlint MD024
+        run: "echo 'MD024: false' > .markdownlint.yaml"
+
+      - name: Lint CHANGELOG.md
+        uses: docker://avtodev/markdown-lint:v1
+        with:
+          args: CHANGELOG.md
