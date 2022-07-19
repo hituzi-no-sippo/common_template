@@ -66,6 +66,11 @@ function __setup_genarate_changelog() {
 
 	cargo install git-cliff
 }
+function __setup_markdown_tools() {
+	info "Setup CHANGELOG generator"
+
+	cargo install git-cliff
+}
 
 function setup() {
 	__setup_shell_tools
@@ -75,6 +80,7 @@ function setup() {
 	__setup_git_commit_message
 	__setup_git_hooks
 	__setup_genarate_changelog
+	__setup_markdown_tools
 }
 
 setup
