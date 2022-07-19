@@ -4,6 +4,7 @@
 
 # Tool Name
 \bCocogitto\b
+\bGitHub Actions\b
 
 # Abbreviation
 \bci\b
