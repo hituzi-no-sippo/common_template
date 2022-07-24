@@ -1,0 +1,33 @@
+= YAML
+:author: hituzi no sippo
+:email: dev@hituzi-no-sippo.me
+:revnumber: v0.1.0
+:revdate: 2022-07-24T14:05:31+09:00
+:revremark: Expand template
+:description: YAML
+:copyright: Copyright (C) 2022 {author}
+// Custom Attributes
+:creation_date: 2022-07-24T14:02:11+09:00
+
+=== YAML
+
+:yamllint_link: link:https://yamllint.readthedocs.io/en/stable/index.html[yamllint^]
+:prettier_link: link:https://prettier.io/[Prettier^]
+[horizontal]
+Formatter::
+  {prettier_link} +
+  link:.prettierrc.yml[Configuration File^]
+
+:yq_link: link:https://mikefarah.gitbook.io/yq/[yq^]
+{yamllint_link} can not format.
+I chose prettier because it had more configurable parameters than {yq_link}.
+
+:filename: lint-yaml.yml
+.GitHub Actions
+* link:{workflows_path}/{filename}[{filename}^]
+
+
+'''
+
+:author_link: link:https://github.com/hituzi-no-sippo[{author}^]
+Copyright (C) 2022 {author_link}
