@@ -11,6 +11,15 @@ repos:
           - json
           - yaml
 
+  # JSON
+  # Linter
+  - repo: https://github.com/TomWright/dasel
+    rev: v1.26.0
+    hooks:
+      - id: dasel-validate
+        types:
+          - json
+
   - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
     rev: v1.5.1
     hooks:
