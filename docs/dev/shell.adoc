@@ -1,9 +1,9 @@
 = Shell
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.5.0
-:revdate: 2022-07-26T17:54:05+09:00
-:revremark: Add GitHub Actions to check shell format with reviewdog
+:revnumber: v0.6.0
+:revdate: 2022-07-26T18:04:15+09:00
+:revremark: Add GitHub Actions to lint format with reviewdog
 :description: Shell
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -36,8 +36,15 @@ link:{workflows_directory}/{filename_on_pull_request}#:~:text=reviewdog/action%2
 Using {shellcheck_link}.
 
 :filename: lint-shell.yml
+:filename_on_pull_request: lint-shell-on-pull-request.yml
 .GitHub Actions
 * link:{workflows_directory}/{filename}[{filename}^]
+* link:{workflows_directory}/{filename_on_pull_request}[{filename_on_pull_request}^]
+
+:run_shellcheck_with_reviewdog_link: link:{github_actions_marketplace_url}/run-shellcheck-with-reviewdog[run-shellcheck-with-reviewdog^]
+.reviewdog
+link:{workflows_directory}/{filename_on_pull_request}#:~:text=reviewdog/action%2Dshellcheck[{filename_on_pull_request}^]::
+  Using {run_shellcheck_with_reviewdog_link}.
 
 
 '''
