@@ -1,6 +1,15 @@
 ---
 # Can't use YAML anchors in the pre-commit configuration.
 repos:
+  # JSON
+  # Formatter
+  - repo: https://github.com/adamchainz/pre-commit-dprint
+    rev: v0.30.3
+    hooks:
+      - id: dprint
+        types_or:
+          - json
+
   - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
     rev: v1.5.1
     hooks:
@@ -13,3 +22,6 @@ ci:
     fix(git-hooks) fix pre-commit hooks from pre-commit.com hooks
 
     for more information, see https://pre-commit.ci
+
+  skip:
+    - dprint
