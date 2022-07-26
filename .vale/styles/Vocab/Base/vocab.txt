@@ -4,3 +4,4 @@ dprint
 actionlint
 reviewdog
 shfmt
+shellcheck
