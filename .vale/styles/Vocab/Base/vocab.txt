@@ -3,3 +3,4 @@ sippo
 dprint
 actionlint
 reviewdog
+shfmt
