@@ -7,6 +7,13 @@ repos:
     rev: v3.5.1-1
     hooks:
       - id: shfmt
+  # Lint
+  # https://github.com/koalaman/shellcheck#pre-commit
+  - repo: https://github.com/koalaman/shellcheck-precommit
+    rev: v0.8.0
+    hooks:
+      - id: shellcheck
+        args: [--severity=warning]
 
   # JSON & YAML
   # Formatter
@@ -60,3 +67,4 @@ ci:
   skip:
     - dprint
     - actionlint
+    - shellcheck
