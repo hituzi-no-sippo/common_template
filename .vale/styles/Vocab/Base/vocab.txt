@@ -6,3 +6,4 @@ reviewdog
 shfmt
 shellcheck
 dasel
+mergeability
