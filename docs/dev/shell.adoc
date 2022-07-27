@@ -1,9 +1,9 @@
 = Shell
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.7.0
-:revdate: 2022-07-27T17:03:19+09:00
-:revremark: Add git hook to check format
+:revnumber: v0.8.0
+:revdate: 2022-07-27T17:05:19+09:00
+:revremark: Add git hook to lint
 :description: Shell
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -41,6 +41,15 @@ link:{workflows_directory}/{filename_on_pull_request}#:~:text=reviewdog/action%2
 
 :shellcheck_link: link:https://www.shellcheck.net/[shellcheck^]
 Using {shellcheck_link}.
+
+:pre_commit_for_shell_lint_url: {github_url}/koalaman/shellcheck-precommit
+:pre_commit_for_shell_lint_link: link:{pre_commit_for_shell_lint_url}[koalaman/shellcheck-precommit^]
+.Git hooks
+pre-commit::
+  Using link:{pre_commit_config_file}#:~:text=repo%3A%20https%3A//github.com/koalaman/shellcheck%2Dprecommit[
+  pre-commit^] ({pre_commit_for_shell_lint_link}). +
+  Request {pre_commit_for_shell_lint_url}/blob/master/.pre-commit-hooks.yaml#:~:text=language%3A%20docker_image[
+  Docker^].
 
 :filename: lint-shell.yml
 :filename_on_pull_request: lint-shell-on-pull-request.yml
