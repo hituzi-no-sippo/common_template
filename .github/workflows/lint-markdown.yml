@@ -31,6 +31,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: markdownlint
+        uses: reviewdog/action-markdownlint@v0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+
       - uses: xt0rted/markdownlint-problem-matcher@v1
 
       - name: Lint Markdown files
