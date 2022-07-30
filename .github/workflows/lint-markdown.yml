@@ -33,5 +33,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Add Matcher
+        uses: xt0rted/markdownlint-problem-matcher@v1
+
       - name: Lint Markdown
         uses: docker://davidanson/markdownlint-cli2:v0.5.0
