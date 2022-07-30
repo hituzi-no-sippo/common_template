@@ -99,10 +99,6 @@ repos:
 ci:
   autoupdate_schedule: weekly
   autoupdate_commit_msg: "chore(git-hooks): update pre-commit hooks"
-  autofix_commit_msg: |
-    fix(git-hooks): fix pre-commit hooks from pre-commit.com hooks
-
-    for more information, see https://pre-commit.ci
 
   skip:
     - dprint
