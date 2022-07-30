@@ -6,10 +6,12 @@ on:
     paths:
       - "**.md"
       - ".dprint.json"
+      - ".markdownlint-cli2.yaml"
   pull_request:
     paths:
       - "**.md"
       - ".dprint.json"
+      - ".markdownlint-cli2.yaml"
 
 jobs:
   format:
@@ -23,3 +25,22 @@ jobs:
         uses: hituzi-no-sippo/check@21681de30f5916de2235da7f22bf7462bb7004cb
         with:
           file-patterns: '"**/*.md"'
+
+  lint:
+    name: Lint
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: markdownlint
+        uses: hituzi-no-sippo/action-markdownlint2@0324d7b507da647ed9ea4da9caac184c2d12d38d
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+
+      - name: Add Matcher
+        uses: xt0rted/markdownlint-problem-matcher@v1
+
+      - name: Lint Markdown
+        uses: docker://davidanson/markdownlint-cli2:v0.5.0

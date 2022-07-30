@@ -59,6 +59,13 @@ repos:
     hooks:
       - id: actionlint
 
+  # Markdown
+  # Lint
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.5.0
+    hooks:
+      - id: markdownlint-cli2
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
     hooks:
@@ -92,10 +99,6 @@ repos:
 ci:
   autoupdate_schedule: weekly
   autoupdate_commit_msg: "chore(git-hooks): update pre-commit hooks"
-  autofix_commit_msg: |
-    fix(git-hooks): fix pre-commit hooks from pre-commit.com hooks
-
-    for more information, see https://pre-commit.ci
 
   skip:
     - dprint
