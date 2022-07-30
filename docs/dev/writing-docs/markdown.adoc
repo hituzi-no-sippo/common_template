@@ -1,14 +1,18 @@
 = Markdown
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.1.0
-:revdate: 2022-07-30T11:33:46+09:00
-:revremark: expand template
+:revnumber: v0.2.0
+:revdate: 2022-07-30T11:54:54+09:00
+:revremark: add dprint of formatter
 :description: Markdown
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-30T11:33:46+09:00
 
+== Format
+
+:dprint_link: link:https://dprint.dev/[dprint^]
+Using {dprint_link}.
 
 
 '''
